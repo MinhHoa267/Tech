@@ -1,0 +1,20 @@
+{
+  "name": "cua-hang-cong-nghe",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seed": "node scripts/tao-du-lieu-mau.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.9.5",
+    "next": "^15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

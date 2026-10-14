@@ -1,0 +1,105 @@
+/* Khai báo màu và font cơ bản cho toàn bộ website. */
+:root { --nen: #f7f8fc; --chu: #1d2433; --chu-phu: #70798a; --xanh: #315ee8; --vien: #e8ebf2; --trang: #ffffff; }
+* { box-sizing: border-box; } /* Tính cả padding và border vào kích thước phần tử. */
+html { scroll-behavior: smooth; } /* Cuộn đến khu vực mượt mà. */
+body { margin: 0; background: var(--nen); color: var(--chu); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; } /* Kiểu chữ mặc định. */
+a { color: inherit; text-decoration: none; } /* Bỏ gạch chân link. */
+button, input { font: inherit; } /* Dùng cùng font cho nút và ô nhập. */
+button { cursor: pointer; } /* Cho biết nút có thể bấm. */
+.trang { max-width: 1240px; margin: 0 auto; padding: 0 28px; } /* Giới hạn chiều rộng và căn giữa trang. */
+.thanh-dau { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; } /* Bố cục thanh đầu trang. */
+.logo { display: inline-flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 850; letter-spacing: -1px; } /* Kiểu logo. */
+.logo-bieu-tuong { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--xanh); color: white; } /* Ô biểu tượng logo. */
+.dieu-huong { display: flex; align-items: center; gap: 30px; color: #555e70; font-size: 14px; font-weight: 650; } /* Các liên kết điều hướng. */
+.dieu-huong a:hover { color: var(--xanh); } /* Đổi màu link khi rê chuột. */
+.nhan-an-toan { color: #3c795f; background: #e8f7ef; padding: 9px 13px; border-radius: 30px; font-size: 12px; font-weight: 700; } /* Nhãn thông điệp an toàn. */
+.anh-bia { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; min-height: 370px; overflow: hidden; padding: 48px 58px; border-radius: 28px; color: white; background: linear-gradient(115deg, #18264c 0%, #2549a5 65%, #416be2 100%); } /* Banner chính có nền chuyển sắc. */
+.anh-bia-noi-dung { position: relative; z-index: 1; max-width: 540px; } /* Giữ chữ phía trước minh họa. */
+.nhan-nho { margin: 0 0 11px; color: var(--xanh); font-size: 11px; font-weight: 850; letter-spacing: 1.7px; } /* Nhãn nhỏ trên tiêu đề. */
+.anh-bia .nhan-nho { color: #b9caff; } /* Màu nhãn trong banner. */
+.anh-bia h1 { max-width: 520px; margin: 0; font-size: clamp(34px, 4vw, 51px); line-height: 1.08; letter-spacing: -2px; } /* Tiêu đề lớn linh hoạt theo màn hình. */
+.mo-ta-bia { max-width: 440px; margin: 18px 0 25px; color: #d8e1ff; font-size: 15px; line-height: 1.7; } /* Mô tả banner. */
+.nut { display: inline-flex; align-items: center; gap: 18px; padding: 13px 17px; border-radius: 12px; font-size: 13px; font-weight: 800; } /* Kiểu nút dùng chung. */
+.nut-sang { background: white; color: #203b8b; } /* Nút sáng trong banner. */
+.nut-sang:hover { transform: translateY(-2px); } /* Hiệu ứng hover cho nút. */
+.minh-hoa-bia { position: relative; min-height: 270px; display: grid; place-items: center; } /* Khu vực minh họa bên phải. */
+.vong-tron { position: absolute; width: 265px; height: 265px; border: 1px solid #8ea6f4; border-radius: 50%; background: radial-gradient(circle, #5176d7 0%, #2d4da6 68%, transparent 69%); } /* Vòng tròn trang trí. */
+.thiet-bi { position: absolute; display: grid; place-items: center; filter: drop-shadow(0 18px 15px #12285c55); } /* Kiểu chung cho emoji thiết bị. */
+.laptop { width: 150px; height: 120px; font-size: 105px; transform: rotate(-8deg); left: 16%; top: 15%; } /* Vị trí laptop. */
+.dien-thoai { width: 90px; height: 130px; font-size: 82px; right: 12%; top: 20%; transform: rotate(10deg); } /* Vị trí điện thoại. */
+.tai-nghe { width: 100px; height: 90px; font-size: 75px; right: 29%; bottom: 0; transform: rotate(-8deg); } /* Vị trí tai nghe. */
+.loi-ich { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 26px 8px 45px; } /* Ba cột lợi ích. */
+.loi-ich > div { display: flex; align-items: center; gap: 13px; } /* Bố trí biểu tượng cạnh nội dung. */
+.loi-ich > div > span { display: grid; place-items: center; width: 45px; height: 45px; border: 1px solid var(--vien); border-radius: 14px; background: white; font-size: 20px; } /* Ô biểu tượng lợi ích. */
+.loi-ich strong, .loi-ich small { display: block; } /* Hiện tiêu đề và mô tả trên hai dòng. */
+.loi-ich strong { margin-bottom: 5px; font-size: 13px; } /* Kiểu tiêu đề lợi ích. */
+.loi-ich small { color: var(--chu-phu); font-size: 12px; } /* Kiểu mô tả lợi ích. */
+.khu-vuc-san-pham { padding: 12px 0 60px; } /* Khoảng cách khu vực sản phẩm. */
+.tieu-de-khu-vuc { display: flex; align-items: end; justify-content: space-between; gap: 24px; } /* Tiêu đề và ô tìm kiếm nằm hai bên. */
+.tieu-de-khu-vuc h2, .khu-vuc-gio h2 { margin: 0; font-size: 30px; letter-spacing: -1px; } /* Tiêu đề khu vực. */
+.mo-ta-khu-vuc { margin: 9px 0 0; color: var(--chu-phu); font-size: 13px; } /* Mô tả khu vực. */
+.tim-kiem { display: flex; align-items: center; gap: 10px; width: 260px; padding: 0 14px; border: 1px solid var(--vien); border-radius: 12px; background: white; color: #7d8799; } /* Khung tìm kiếm. */
+.tim-kiem input { width: 100%; min-width: 0; padding: 13px 0; border: 0; outline: 0; background: transparent; font-size: 13px; } /* Ô nhập tìm kiếm. */
+.cac-danh-muc { display: flex; flex-wrap: wrap; gap: 9px; margin: 26px 0 22px; } /* Dãy nút danh mục. */
+.nut-danh-muc { padding: 9px 15px; border: 1px solid var(--vien); border-radius: 30px; background: white; color: #667085; font-size: 12px; font-weight: 750; } /* Nút danh mục bình thường. */
+.nut-danh-muc:hover, .nut-danh-muc.dang-chon { border-color: var(--xanh); background: var(--xanh); color: white; } /* Nút danh mục được chọn. */
+.luoi-san-pham { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } /* Lưới ba cột sản phẩm. */
+.the-san-pham { overflow: hidden; border: 1px solid #eceef4; border-radius: 18px; background: white; transition: transform .2s, box-shadow .2s; } /* Thẻ sản phẩm. */
+.the-san-pham:hover { transform: translateY(-4px); box-shadow: 0 14px 32px #202c4b0d; } /* Nâng thẻ khi rê chuột. */
+.vung-hinh { position: relative; display: grid; place-items: center; min-height: 185px; overflow: hidden; background: #edf2ff; } /* Vùng minh họa sản phẩm. */
+.nen-laptop { background: #e9edff; } /* Nền cho laptop. */
+.nen-điện-thoại { background: #e7f6f2; } /* Nền cho điện thoại. */
+.nen-phụ-kiện { background: #fff1e7; } /* Nền cho phụ kiện. */
+.nen-màn-hình { background: #e9f4f8; } /* Nền cho màn hình. */
+.emoji-san-pham { font-size: 72px; filter: drop-shadow(0 10px 9px #25365b20); transition: transform .2s; } /* Emoji minh họa sản phẩm. */
+.the-san-pham:hover .emoji-san-pham { transform: scale(1.08); } /* Phóng to nhẹ hình khi hover. */
+.nhan-noi-bat { position: absolute; top: 13px; left: 13px; padding: 6px 9px; border-radius: 20px; background: white; color: #315ee8; font-size: 10px; font-weight: 850; } /* Nhãn nổi bật. */
+.noi-dung-the { padding: 17px; } /* Khoảng cách bên trong thẻ. */
+.thuong-hieu { margin: 0 0 8px; color: #7b8494; font-size: 10px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; } /* Thương hiệu và danh mục. */
+.noi-dung-the h3 { margin: 0; font-size: 16px; letter-spacing: -.3px; } /* Tên sản phẩm. */
+.mo-ta-san-pham { min-height: 34px; margin: 9px 0 17px; color: var(--chu-phu); font-size: 12px; line-height: 1.5; } /* Mô tả ngắn. */
+.hang-gia { display: flex; align-items: center; justify-content: space-between; gap: 10px; } /* Giá và nút thêm giỏ. */
+.hang-gia strong { color: #2349bb; font-size: 15px; } /* Giá sản phẩm. */
+.nut-them { width: 36px; height: 36px; border: 0; border-radius: 11px; background: #edf1ff; color: var(--xanh); font-size: 25px; line-height: 1; } /* Nút thêm vào giỏ. */
+.nut-them:hover { background: var(--xanh); color: white; } /* Đổi màu nút khi rê chuột. */
+.thong-bao { padding: 12px 15px; border-radius: 10px; background: #eaf7ef; color: #26714d; font-size: 13px; } /* Thông báo trạng thái. */
+.trang-thai { padding: 35px; text-align: center; color: var(--chu-phu); } /* Trạng thái tải hoặc không có kết quả. */
+.khu-vuc-gio { margin: 0 0 60px; padding: 28px; border: 1px solid var(--vien); border-radius: 20px; background: white; } /* Hộp giỏ hàng. */
+.gio-rong { display: flex; align-items: center; gap: 13px; margin-top: 22px; padding: 19px; border-radius: 13px; background: #f7f8fc; color: #737d8e; font-size: 13px; } /* Nội dung giỏ rỗng. */
+.danh-sach-gio { margin-top: 20px; } /* Khoảng cách danh sách món. */
+.dong-gio, .tong-tien { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 14px 0; border-bottom: 1px solid var(--vien); font-size: 13px; } /* Một dòng sản phẩm và tổng tiền. */
+.dong-gio small { color: var(--chu-phu); } /* Số lượng trong giỏ. */
+.dong-gio strong { white-space: nowrap; } /* Không ngắt dòng thành tiền. */
+.tong-tien { border-bottom: 0; font-size: 15px; } /* Dòng tổng tiền. */
+.tong-tien strong { color: var(--xanh); font-size: 19px; } /* Số tiền tổng cộng. */
+.chan-trang { padding: 27px 0 34px; border-top: 1px solid var(--vien); text-align: center; } /* Chân trang. */
+.chan-trang .logo { justify-content: center; font-size: 19px; } /* Logo ở chân trang. */
+.chan-trang p { margin: 9px 0; color: var(--chu-phu); font-size: 12px; } /* Dòng mô tả chân trang. */
+.chan-trang small { color: #9aa1ad; font-size: 10px; } /* Dòng bản quyền. */
+@media (max-width: 800px) { /* Điều chỉnh cho tablet và điện thoại ngang. */
+  .trang { padding: 0 18px; } /* Giảm lề trang. */
+  .anh-bia { grid-template-columns: 1fr; padding: 38px 30px; } /* Chuyển banner thành một cột. */
+  .minh-hoa-bia { min-height: 220px; } /* Thu gọn minh họa. */
+  .loi-ich { gap: 13px; } /* Giảm khoảng cách lợi ích. */
+  .luoi-san-pham { grid-template-columns: repeat(2, minmax(0, 1fr)); } /* Hai cột sản phẩm. */
+  .nhan-an-toan { display: none; } /* Ẩn nhãn nhỏ để tiết kiệm chỗ. */
+} /* Kết thúc breakpoint tablet. */
+@media (max-width: 520px) { /* Điều chỉnh cho điện thoại. */
+  .thanh-dau { height: 70px; } /* Thanh đầu thấp hơn. */
+  .logo { font-size: 19px; } /* Thu logo. */
+  .dieu-huong { gap: 12px; font-size: 12px; } /* Thu gọn điều hướng. */
+  .anh-bia { padding: 32px 22px 18px; border-radius: 20px; } /* Giảm padding banner. */
+  .anh-bia h1 { font-size: 35px; } /* Cỡ tiêu đề trên điện thoại. */
+  .minh-hoa-bia { min-height: 185px; } /* Thu nhỏ khu vực minh họa. */
+  .vong-tron { width: 190px; height: 190px; } /* Thu vòng tròn. */
+  .laptop { font-size: 75px; } /* Thu emoji laptop. */
+  .dien-thoai { font-size: 60px; } /* Thu emoji điện thoại. */
+  .tai-nghe { font-size: 56px; } /* Thu emoji tai nghe. */
+  .loi-ich { grid-template-columns: 1fr; padding: 25px 3px 35px; } /* Xếp lợi ích thành một cột. */
+  .tieu-de-khu-vuc { align-items: stretch; flex-direction: column; } /* Xếp tiêu đề và tìm kiếm dọc. */
+  .tim-kiem { width: 100%; } /* Ô tìm kiếm chiếm chiều rộng. */
+  .tieu-de-khu-vuc h2, .khu-vuc-gio h2 { font-size: 26px; } /* Thu tiêu đề khu vực. */
+  .luoi-san-pham { grid-template-columns: 1fr; gap: 14px; } /* Một cột sản phẩm. */
+  .vung-hinh { min-height: 160px; } /* Thu chiều cao vùng hình. */
+  .khu-vuc-gio { padding: 20px; } /* Giảm padding giỏ hàng. */
+} /* Kết thúc breakpoint điện thoại. */
